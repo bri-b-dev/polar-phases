@@ -16,6 +16,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - (Placeholder for fixes)
 
+## [0.2.2] - 2026-06-20
+
+### Changed
+- Adjusted HR Zones to polar-modeled zones
+
 ## [0.2.0] - 2026-06-20
 
 ### Added
