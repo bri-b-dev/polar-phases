@@ -51,14 +51,14 @@ import dev.bri.polarphases.viewmodel.ZoneFormState
 import dev.bri.polarphases.viewmodel.ZoneViewModel
 
 private val COLOR_PALETTE = listOf(
-    0xFF64B5F6.toInt(), // blue
+    0xFF9E9E9E.toInt(), // gray   (Polar Z1)
+    0xFF42A5F5.toInt(), // blue   (Polar Z2)
+    0xFF66BB6A.toInt(), // green  (Polar Z3)
+    0xFFFFEE58.toInt(), // yellow (Polar Z4)
+    0xFFEF5350.toInt(), // red    (Polar Z5)
     0xFF4DB6AC.toInt(), // teal
-    0xFF66BB6A.toInt(), // green
     0xFFAED581.toInt(), // light green
-    0xFFFFEE58.toInt(), // yellow
     0xFFFFB74D.toInt(), // orange
-    0xFFFFA726.toInt(), // amber
-    0xFFEF5350.toInt(), // red
     0xFFBA68C8.toInt(), // purple
     0xFF90A4AE.toInt(), // blue grey
 )
