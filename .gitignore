@@ -1,0 +1,78 @@
+# Gradle files
+.gradle/
+build/
+*.apk
+*.ap_
+*.aab
+
+# Android Studio
+.idea/
+*.iml
+*.iws
+*.ipr
+.DS_Store
+local.properties
+captures/
+.externalNativeBuild
+.cxx/
+
+# Kotlin
+*.kt.bak
+.kotlin/
+
+# Build
+bin/
+gen/
+out/
+
+# Gradle wrapper
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+
+# Test coverage
+coverage/
+*.ec
+*.exec
+jacoco.exec
+
+# IDE
+*.swp
+*.swo
+*~
+.vscode/
+.settings/
+.classpath
+.project
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Signing
+*.jks
+*.keystore
+keystore.properties
+signing.properties
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Dependencies
+.m2/
+
+# Android Emulator
+.android/
+emulator.log
+
+# Lint
+lint-baseline.xml
+
+# CMake
+cmake-build-*/
