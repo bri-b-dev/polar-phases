@@ -21,7 +21,7 @@ Since the official Polar interface (AccessLink/API v4) is exclusively read-only 
 ## 2. Target Audience and Usage Context
 
 - Single user, no multi-user operation required
-- Usage in gym (Encompass Elevate) with Android smartphone and Polar H10 chest strap
+- Usage in gym with Android smartphone and Polar H10 chest strap
 - Primary training device: treadmill with incline (speed/incline are controlled manually, not by the app)
 - Training control is data-driven via heart rate target zones calculated using the Karvonen formula
 

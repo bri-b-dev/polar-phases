@@ -2,7 +2,7 @@ package dev.bri.polarbear.repository
 
 import dev.bri.polarbear.data.db.HrZoneDao
 import dev.bri.polarbear.data.model.HrZone
-import dev.bri.polarbear.util.KarvonenZone
+import dev.bri.polarbear.util.HrmaxZone
 import kotlinx.coroutines.flow.Flow
 
 class ZoneRepository(private val dao: HrZoneDao) {
@@ -18,8 +18,7 @@ class ZoneRepository(private val dao: HrZoneDao) {
 
     suspend fun deleteZone(id: Long) = dao.deleteById(id)
 
-    /** Replaces all zones with the given Karvonen-computed list. */
-    suspend fun replaceWithKarvonenZones(zones: List<KarvonenZone>) {
+    suspend fun replaceZones(zones: List<HrmaxZone>) {
         dao.deleteAll()
         zones.forEachIndexed { index, zone ->
             dao.insert(

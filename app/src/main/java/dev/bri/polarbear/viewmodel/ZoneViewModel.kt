@@ -22,8 +22,7 @@ data class ZoneFormState(
     val isEdit: Boolean = false,
 )
 
-data class KarvonenFormState(
-    val restingHr: String = "62",
+data class HrmaxFormState(
     val maxHr: String = "179",
 )
 
@@ -35,7 +34,7 @@ class ZoneViewModel(application: Application) : AndroidViewModel(application) {
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), emptyList())
 
     val zoneDialog = MutableStateFlow<ZoneFormState?>(null)
-    val karvonenDialog = MutableStateFlow<KarvonenFormState?>(null)
+    val hrmaxDialog = MutableStateFlow<HrmaxFormState?>(null)
 
     fun openAddDialog() {
         zoneDialog.value = ZoneFormState()
@@ -88,26 +87,25 @@ class ZoneViewModel(application: Application) : AndroidViewModel(application) {
         viewModelScope.launch { repo.deleteZone(id) }
     }
 
-    fun openKarvonenDialog() {
-        karvonenDialog.value = KarvonenFormState()
+    fun openHrmaxDialog() {
+        hrmaxDialog.value = HrmaxFormState()
     }
 
-    fun dismissKarvonenDialog() {
-        karvonenDialog.value = null
+    fun dismissHrmaxDialog() {
+        hrmaxDialog.value = null
     }
 
-    fun updateKarvonenForm(update: KarvonenFormState.() -> KarvonenFormState) {
-        karvonenDialog.update { it?.update() }
+    fun updateHrmaxForm(update: HrmaxFormState.() -> HrmaxFormState) {
+        hrmaxDialog.update { it?.update() }
     }
 
-    fun applyKarvonen() {
-        val form = karvonenDialog.value ?: return
-        val resting = form.restingHr.toIntOrNull() ?: return
+    fun applyHrmax() {
+        val form = hrmaxDialog.value ?: return
         val max = form.maxHr.toIntOrNull() ?: return
-        if (resting <= 0 || max <= resting) return
+        if (max <= 0) return
         viewModelScope.launch {
-            repo.replaceWithKarvonenZones(defaultZones(resting, max))
-            karvonenDialog.value = null
+            repo.replaceZones(defaultZones(max))
+            hrmaxDialog.value = null
         }
     }
 }
