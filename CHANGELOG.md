@@ -16,6 +16,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - (Placeholder for fixes)
 
+## [0.7.2] - 2026-06-22
+
+### Changed
+- Project renamed from "Polar Phases" to "Polar Bear" (branding refresh aligning with Polar Beat naming convention)
+- Package name changed from `dev.bri.polarphases` to `dev.bri.polarbear`
+- App class renamed from `PolarPhasesApp` to `PolarBearApp`
+- All theme and resource references updated accordingly
+
 ## [0.7.0] - 2026-06-21
 
 ### Added

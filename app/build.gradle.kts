@@ -6,15 +6,15 @@ plugins {
 }
 
 android {
-    namespace = "dev.bri.polarphases"
+    namespace = "dev.bri.polarbear"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "dev.bri.polarphases"
+        applicationId = "dev.bri.polarbear"
         minSdk = 26
         targetSdk = 35
-        versionCode = 6
-        versionName = "0.4.1"
+        versionCode = 7
+        versionName = "0.7.2"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
