@@ -1,4 +1,4 @@
-package dev.bri.polarphases.data.model
+package dev.bri.polarbear.data.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

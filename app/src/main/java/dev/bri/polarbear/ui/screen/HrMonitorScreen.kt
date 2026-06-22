@@ -1,4 +1,4 @@
-package dev.bri.polarphases.ui.screen
+package dev.bri.polarbear.ui.screen
 
 import android.Manifest
 import android.os.Build
@@ -41,9 +41,9 @@ import androidx.compose.ui.unit.sp
 import com.google.accompanist.permissions.ExperimentalPermissionsApi
 import com.google.accompanist.permissions.MultiplePermissionsState
 import com.google.accompanist.permissions.rememberMultiplePermissionsState
-import dev.bri.polarphases.ble.BleUiState
-import dev.bri.polarphases.ble.ScannedDevice
-import dev.bri.polarphases.viewmodel.BleViewModel
+import dev.bri.polarbear.ble.BleUiState
+import dev.bri.polarbear.ble.ScannedDevice
+import dev.bri.polarbear.viewmodel.BleViewModel
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalPermissionsApi::class)
 @Composable

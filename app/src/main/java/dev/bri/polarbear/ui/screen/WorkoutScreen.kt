@@ -1,4 +1,4 @@
-package dev.bri.polarphases.ui.screen
+package dev.bri.polarbear.ui.screen
 
 import android.app.Activity
 import android.view.WindowManager
@@ -49,13 +49,13 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import dev.bri.polarphases.data.model.HrZone
-import dev.bri.polarphases.viewmodel.BleViewModel
-import dev.bri.polarphases.viewmodel.ExecutionPhase
-import dev.bri.polarphases.viewmodel.PlanGroup
-import dev.bri.polarphases.viewmodel.WorkoutExecutionViewModel
-import dev.bri.polarphases.viewmodel.WorkoutState
-import dev.bri.polarphases.viewmodel.ZoneCompliance
+import dev.bri.polarbear.data.model.HrZone
+import dev.bri.polarbear.viewmodel.BleViewModel
+import dev.bri.polarbear.viewmodel.ExecutionPhase
+import dev.bri.polarbear.viewmodel.PlanGroup
+import dev.bri.polarbear.viewmodel.WorkoutExecutionViewModel
+import dev.bri.polarbear.viewmodel.WorkoutState
+import dev.bri.polarbear.viewmodel.ZoneCompliance
 
 private val COLOR_TOO_HIGH = Color(0xFFF44336)
 private val COLOR_TOO_LOW = Color(0xFFFF9800)

@@ -1,4 +1,4 @@
-package dev.bri.polarphases.viewmodel
+package dev.bri.polarbear.viewmodel
 
 import android.app.Application
 import android.media.AudioManager
@@ -11,15 +11,15 @@ import android.os.Vibrator
 import android.os.VibratorManager
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
-import dev.bri.polarphases.PolarPhasesApp
-import dev.bri.polarphases.ble.BleUiState
-import dev.bri.polarphases.data.model.HrSample
-import dev.bri.polarphases.data.model.HrZone
-import dev.bri.polarphases.data.model.SessionPhaseRecord
-import dev.bri.polarphases.data.model.WorkoutSession
-import dev.bri.polarphases.data.model.WorkoutTemplateWithItems
-import dev.bri.polarphases.data.model.ZoneSnapshot
-import dev.bri.polarphases.repository.toZoneIdList
+import dev.bri.polarbear.PolarBearApp
+import dev.bri.polarbear.ble.BleUiState
+import dev.bri.polarbear.data.model.HrSample
+import dev.bri.polarbear.data.model.HrZone
+import dev.bri.polarbear.data.model.SessionPhaseRecord
+import dev.bri.polarbear.data.model.WorkoutSession
+import dev.bri.polarbear.data.model.WorkoutTemplateWithItems
+import dev.bri.polarbear.data.model.ZoneSnapshot
+import dev.bri.polarbear.repository.toZoneIdList
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
@@ -99,7 +99,7 @@ sealed class WorkoutState {
 
 class WorkoutExecutionViewModel(application: Application) : AndroidViewModel(application) {
 
-    private val app = application as PolarPhasesApp
+    private val app = application as PolarBearApp
     private val templateRepo = app.templateRepository
     private val zoneRepo = app.zoneRepository
     private val sessionRepo = app.sessionRepository

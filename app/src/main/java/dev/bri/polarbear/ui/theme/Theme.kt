@@ -1,4 +1,4 @@
-package dev.bri.polarphases.ui.theme
+package dev.bri.polarbear.ui.theme
 
 import android.app.Activity
 import android.os.Build
@@ -28,7 +28,7 @@ private val LightColorScheme = lightColorScheme(
 )
 
 @Composable
-fun PolarPhasesTheme(
+fun PolarBearTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     dynamicColor: Boolean = true,
     content: @Composable () -> Unit,

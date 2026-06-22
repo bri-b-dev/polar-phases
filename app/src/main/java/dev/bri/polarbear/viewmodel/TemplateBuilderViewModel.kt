@@ -1,13 +1,13 @@
-package dev.bri.polarphases.viewmodel
+package dev.bri.polarbear.viewmodel
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
-import dev.bri.polarphases.PolarPhasesApp
-import dev.bri.polarphases.data.model.HrZone
-import dev.bri.polarphases.repository.TemplateRepository.Companion.ITEM_TYPE_BLOCK
-import dev.bri.polarphases.repository.TemplateRepository.Companion.ITEM_TYPE_PHASE
-import dev.bri.polarphases.repository.toZoneIdList
+import dev.bri.polarbear.PolarBearApp
+import dev.bri.polarbear.data.model.HrZone
+import dev.bri.polarbear.repository.TemplateRepository.Companion.ITEM_TYPE_BLOCK
+import dev.bri.polarbear.repository.TemplateRepository.Companion.ITEM_TYPE_PHASE
+import dev.bri.polarbear.repository.toZoneIdList
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
@@ -61,7 +61,7 @@ sealed class SequenceItemDraft {
 
 class TemplateBuilderViewModel(application: Application) : AndroidViewModel(application) {
 
-    private val app = application as PolarPhasesApp
+    private val app = application as PolarBearApp
     private val templateRepo = app.templateRepository
 
     val zones: StateFlow<List<HrZone>> = app.zoneRepository.observeZones()

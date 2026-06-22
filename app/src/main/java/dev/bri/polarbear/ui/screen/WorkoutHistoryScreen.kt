@@ -1,4 +1,4 @@
-package dev.bri.polarphases.ui.screen
+package dev.bri.polarbear.ui.screen
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -28,8 +28,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import dev.bri.polarphases.data.model.WorkoutSession
-import dev.bri.polarphases.viewmodel.WorkoutHistoryViewModel
+import dev.bri.polarbear.data.model.WorkoutSession
+import dev.bri.polarbear.viewmodel.WorkoutHistoryViewModel
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale

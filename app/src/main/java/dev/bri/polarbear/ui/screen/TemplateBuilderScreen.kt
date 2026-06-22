@@ -1,4 +1,4 @@
-package dev.bri.polarphases.ui.screen
+package dev.bri.polarbear.ui.screen
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -47,12 +47,12 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
-import dev.bri.polarphases.data.model.HrZone
-import dev.bri.polarphases.viewmodel.BlockFormState
-import dev.bri.polarphases.viewmodel.BlockPhaseForm
-import dev.bri.polarphases.viewmodel.PhaseFormState
-import dev.bri.polarphases.viewmodel.SequenceItemDraft
-import dev.bri.polarphases.viewmodel.TemplateBuilderViewModel
+import dev.bri.polarbear.data.model.HrZone
+import dev.bri.polarbear.viewmodel.BlockFormState
+import dev.bri.polarbear.viewmodel.BlockPhaseForm
+import dev.bri.polarbear.viewmodel.PhaseFormState
+import dev.bri.polarbear.viewmodel.SequenceItemDraft
+import dev.bri.polarbear.viewmodel.TemplateBuilderViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

@@ -1,11 +1,11 @@
-package dev.bri.polarphases.viewmodel
+package dev.bri.polarbear.viewmodel
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
-import dev.bri.polarphases.PolarPhasesApp
-import dev.bri.polarphases.data.model.WorkoutSession
-import dev.bri.polarphases.data.model.WorkoutSessionWithDetails
+import dev.bri.polarbear.PolarBearApp
+import dev.bri.polarbear.data.model.WorkoutSession
+import dev.bri.polarbear.data.model.WorkoutSessionWithDetails
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
@@ -15,7 +15,7 @@ import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 
 class WorkoutHistoryViewModel(application: Application) : AndroidViewModel(application) {
-    private val sessionRepo = (application as PolarPhasesApp).sessionRepository
+    private val sessionRepo = (application as PolarBearApp).sessionRepository
 
     val sessions: StateFlow<List<WorkoutSession>> = sessionRepo.observeAll()
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), emptyList())
@@ -26,7 +26,7 @@ class WorkoutHistoryViewModel(application: Application) : AndroidViewModel(appli
 }
 
 class WorkoutSessionDetailViewModel(application: Application) : AndroidViewModel(application) {
-    private val sessionRepo = (application as PolarPhasesApp).sessionRepository
+    private val sessionRepo = (application as PolarBearApp).sessionRepository
 
     private val _details = MutableStateFlow<WorkoutSessionWithDetails?>(null)
     val details: StateFlow<WorkoutSessionWithDetails?> = _details.asStateFlow()

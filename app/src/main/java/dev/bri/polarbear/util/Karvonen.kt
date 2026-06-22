@@ -1,4 +1,4 @@
-package dev.bri.polarphases.util
+package dev.bri.polarbear.util
 
 /** Returns the target heart rate bpm for a given Karvonen intensity (0.0–1.0). */
 fun karvonenBpm(restingHr: Int, maxHr: Int, intensity: Double): Int =

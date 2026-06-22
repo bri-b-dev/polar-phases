@@ -1,10 +1,10 @@
-package dev.bri.polarphases.data.db
+package dev.bri.polarbear.data.db
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
-import dev.bri.polarphases.data.model.HrZone
+import dev.bri.polarbear.data.model.HrZone
 import kotlinx.coroutines.flow.Flow
 
 @Dao

@@ -1,4 +1,4 @@
-package dev.bri.polarphases
+package dev.bri.polarbear
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -11,28 +11,28 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import dev.bri.polarphases.ui.screen.HrMonitorScreen
-import dev.bri.polarphases.ui.screen.TemplateBuilderScreen
-import dev.bri.polarphases.ui.screen.TemplateListScreen
-import dev.bri.polarphases.ui.screen.WorkoutHistoryScreen
-import dev.bri.polarphases.ui.screen.WorkoutScreen
-import dev.bri.polarphases.ui.screen.WorkoutSessionDetailScreen
-import dev.bri.polarphases.ui.screen.ZoneManagementScreen
-import dev.bri.polarphases.ui.theme.PolarPhasesTheme
-import dev.bri.polarphases.viewmodel.BleViewModel
-import dev.bri.polarphases.viewmodel.TemplateBuilderViewModel
-import dev.bri.polarphases.viewmodel.TemplateListViewModel
-import dev.bri.polarphases.viewmodel.WorkoutExecutionViewModel
-import dev.bri.polarphases.viewmodel.WorkoutHistoryViewModel
-import dev.bri.polarphases.viewmodel.WorkoutSessionDetailViewModel
-import dev.bri.polarphases.viewmodel.ZoneViewModel
+import dev.bri.polarbear.ui.screen.HrMonitorScreen
+import dev.bri.polarbear.ui.screen.TemplateBuilderScreen
+import dev.bri.polarbear.ui.screen.TemplateListScreen
+import dev.bri.polarbear.ui.screen.WorkoutHistoryScreen
+import dev.bri.polarbear.ui.screen.WorkoutScreen
+import dev.bri.polarbear.ui.screen.WorkoutSessionDetailScreen
+import dev.bri.polarbear.ui.screen.ZoneManagementScreen
+import dev.bri.polarbear.ui.theme.PolarBearTheme
+import dev.bri.polarbear.viewmodel.BleViewModel
+import dev.bri.polarbear.viewmodel.TemplateBuilderViewModel
+import dev.bri.polarbear.viewmodel.TemplateListViewModel
+import dev.bri.polarbear.viewmodel.WorkoutExecutionViewModel
+import dev.bri.polarbear.viewmodel.WorkoutHistoryViewModel
+import dev.bri.polarbear.viewmodel.WorkoutSessionDetailViewModel
+import dev.bri.polarbear.viewmodel.ZoneViewModel
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            PolarPhasesTheme {
+            PolarBearTheme {
                 val navController = rememberNavController()
                 // Activity-scoped so BLE connection persists across navigation (N-6)
                 val bleVm: BleViewModel = viewModel()

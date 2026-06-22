@@ -1,14 +1,14 @@
-package dev.bri.polarphases.data.db
+package dev.bri.polarbear.data.db
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Transaction
-import dev.bri.polarphases.data.model.HrSample
-import dev.bri.polarphases.data.model.SessionPhaseRecord
-import dev.bri.polarphases.data.model.WorkoutSession
-import dev.bri.polarphases.data.model.WorkoutSessionWithDetails
-import dev.bri.polarphases.data.model.ZoneSnapshot
+import dev.bri.polarbear.data.model.HrSample
+import dev.bri.polarbear.data.model.SessionPhaseRecord
+import dev.bri.polarbear.data.model.WorkoutSession
+import dev.bri.polarbear.data.model.WorkoutSessionWithDetails
+import dev.bri.polarbear.data.model.ZoneSnapshot
 import kotlinx.coroutines.flow.Flow
 
 @Dao

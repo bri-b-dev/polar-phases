@@ -1,4 +1,4 @@
-package dev.bri.polarphases.ui.screen
+package dev.bri.polarbear.ui.screen
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -45,10 +45,10 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
-import dev.bri.polarphases.data.model.HrZone
-import dev.bri.polarphases.viewmodel.KarvonenFormState
-import dev.bri.polarphases.viewmodel.ZoneFormState
-import dev.bri.polarphases.viewmodel.ZoneViewModel
+import dev.bri.polarbear.data.model.HrZone
+import dev.bri.polarbear.viewmodel.KarvonenFormState
+import dev.bri.polarbear.viewmodel.ZoneFormState
+import dev.bri.polarbear.viewmodel.ZoneViewModel
 
 private val COLOR_PALETTE = listOf(
     0xFF9E9E9E.toInt(), // gray   (Polar Z1)

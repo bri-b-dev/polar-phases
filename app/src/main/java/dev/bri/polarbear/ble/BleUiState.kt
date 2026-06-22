@@ -1,4 +1,4 @@
-package dev.bri.polarphases.ble
+package dev.bri.polarbear.ble
 
 sealed class BleUiState {
     data object Idle : BleUiState()

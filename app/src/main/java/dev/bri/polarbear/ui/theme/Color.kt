@@ -1,4 +1,4 @@
-package dev.bri.polarphases.ui.theme
+package dev.bri.polarbear.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

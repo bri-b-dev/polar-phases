@@ -1,4 +1,4 @@
-package dev.bri.polarphases.data.db
+package dev.bri.polarbear.data.db
 
 import android.content.Context
 import androidx.room.Database
@@ -6,15 +6,15 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
-import dev.bri.polarphases.data.model.BlockPhase
-import dev.bri.polarphases.data.model.HrSample
-import dev.bri.polarphases.data.model.HrZone
-import dev.bri.polarphases.data.model.SessionPhaseRecord
-import dev.bri.polarphases.data.model.TemplateSequenceItem
-import dev.bri.polarphases.data.model.WorkoutSession
-import dev.bri.polarphases.data.model.WorkoutTemplate
-import dev.bri.polarphases.data.model.ZoneSnapshot
-import dev.bri.polarphases.util.defaultZones
+import dev.bri.polarbear.data.model.BlockPhase
+import dev.bri.polarbear.data.model.HrSample
+import dev.bri.polarbear.data.model.HrZone
+import dev.bri.polarbear.data.model.SessionPhaseRecord
+import dev.bri.polarbear.data.model.TemplateSequenceItem
+import dev.bri.polarbear.data.model.WorkoutSession
+import dev.bri.polarbear.data.model.WorkoutTemplate
+import dev.bri.polarbear.data.model.ZoneSnapshot
+import dev.bri.polarbear.util.defaultZones
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

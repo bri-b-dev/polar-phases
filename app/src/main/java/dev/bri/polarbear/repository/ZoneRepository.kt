@@ -1,8 +1,8 @@
-package dev.bri.polarphases.repository
+package dev.bri.polarbear.repository
 
-import dev.bri.polarphases.data.db.HrZoneDao
-import dev.bri.polarphases.data.model.HrZone
-import dev.bri.polarphases.util.KarvonenZone
+import dev.bri.polarbear.data.db.HrZoneDao
+import dev.bri.polarbear.data.model.HrZone
+import dev.bri.polarbear.util.KarvonenZone
 import kotlinx.coroutines.flow.Flow
 
 class ZoneRepository(private val dao: HrZoneDao) {

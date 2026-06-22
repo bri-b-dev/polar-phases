@@ -1,10 +1,10 @@
-package dev.bri.polarphases.viewmodel
+package dev.bri.polarbear.viewmodel
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
-import dev.bri.polarphases.ble.BleManager
-import dev.bri.polarphases.ble.BleUiState
-import dev.bri.polarphases.ble.ScannedDevice
+import dev.bri.polarbear.ble.BleManager
+import dev.bri.polarbear.ble.BleUiState
+import dev.bri.polarbear.ble.ScannedDevice
 import kotlinx.coroutines.flow.StateFlow
 
 class BleViewModel(application: Application) : AndroidViewModel(application) {

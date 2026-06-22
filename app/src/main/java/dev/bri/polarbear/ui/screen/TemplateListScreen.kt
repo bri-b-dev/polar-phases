@@ -1,4 +1,4 @@
-package dev.bri.polarphases.ui.screen
+package dev.bri.polarbear.ui.screen
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -29,8 +29,8 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import dev.bri.polarphases.data.model.WorkoutTemplate
-import dev.bri.polarphases.viewmodel.TemplateListViewModel
+import dev.bri.polarbear.data.model.WorkoutTemplate
+import dev.bri.polarbear.viewmodel.TemplateListViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

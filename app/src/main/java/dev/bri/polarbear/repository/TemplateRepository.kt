@@ -1,10 +1,10 @@
-package dev.bri.polarphases.repository
+package dev.bri.polarbear.repository
 
-import dev.bri.polarphases.data.db.WorkoutTemplateDao
-import dev.bri.polarphases.data.model.BlockPhase
-import dev.bri.polarphases.data.model.TemplateSequenceItem
-import dev.bri.polarphases.data.model.WorkoutTemplate
-import dev.bri.polarphases.data.model.WorkoutTemplateWithItems
+import dev.bri.polarbear.data.db.WorkoutTemplateDao
+import dev.bri.polarbear.data.model.BlockPhase
+import dev.bri.polarbear.data.model.TemplateSequenceItem
+import dev.bri.polarbear.data.model.WorkoutTemplate
+import dev.bri.polarbear.data.model.WorkoutTemplateWithItems
 import kotlinx.coroutines.flow.Flow
 
 class TemplateRepository(private val dao: WorkoutTemplateDao) {

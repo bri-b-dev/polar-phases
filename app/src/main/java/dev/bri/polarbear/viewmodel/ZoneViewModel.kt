@@ -1,11 +1,11 @@
-package dev.bri.polarphases.viewmodel
+package dev.bri.polarbear.viewmodel
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
-import dev.bri.polarphases.PolarPhasesApp
-import dev.bri.polarphases.data.model.HrZone
-import dev.bri.polarphases.util.defaultZones
+import dev.bri.polarbear.PolarBearApp
+import dev.bri.polarbear.data.model.HrZone
+import dev.bri.polarbear.util.defaultZones
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
@@ -29,7 +29,7 @@ data class KarvonenFormState(
 
 class ZoneViewModel(application: Application) : AndroidViewModel(application) {
 
-    private val repo = (application as PolarPhasesApp).zoneRepository
+    private val repo = (application as PolarBearApp).zoneRepository
 
     val zones: StateFlow<List<HrZone>> = repo.observeZones()
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), emptyList())

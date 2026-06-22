@@ -1,13 +1,13 @@
-package dev.bri.polarphases.repository
+package dev.bri.polarbear.repository
 
-import dev.bri.polarphases.data.db.WorkoutSessionDao
-import dev.bri.polarphases.data.model.HrSample
-import dev.bri.polarphases.data.model.SessionPhaseRecord
-import dev.bri.polarphases.data.model.WorkoutSession
-import dev.bri.polarphases.data.model.WorkoutSessionWithDetails
+import dev.bri.polarbear.data.db.WorkoutSessionDao
+import dev.bri.polarbear.data.model.HrSample
+import dev.bri.polarbear.data.model.SessionPhaseRecord
+import dev.bri.polarbear.data.model.WorkoutSession
+import dev.bri.polarbear.data.model.WorkoutSessionWithDetails
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
-import dev.bri.polarphases.data.model.ZoneSnapshot
+import dev.bri.polarbear.data.model.ZoneSnapshot
 
 class SessionRepository(private val dao: WorkoutSessionDao) {
     fun observeAll(): Flow<List<WorkoutSession>> = dao.observeAll()

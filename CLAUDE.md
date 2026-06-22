@@ -12,7 +12,7 @@ Authoritative sources, do not duplicate in this file:
 
 ## Project Status
 
-**Slice 01 (BLE Spike) scaffold complete.** Single `:app` module, package `dev.bri.polarphases`.
+**Slice 01 (BLE Spike) scaffold complete.** Single `:app` module, package `dev.bri.polarbear`.
 
 ### Build & Install
 
@@ -34,10 +34,10 @@ adb install app/build/outputs/apk/debug/app-debug.apk
 
 | What | Path |
 |------|------|
-| BLE scan + GATT connection | `app/src/main/java/dev/bri/polarphases/ble/BleManager.kt` |
-| HR Measurement parser (0x2A37) | `app/src/main/java/dev/bri/polarphases/ble/HrParser.kt` |
-| UI state machine | `app/src/main/java/dev/bri/polarphases/ble/BleUiState.kt` |
-| Single screen (scan → connect → live bpm) | `app/src/main/java/dev/bri/polarphases/ui/screen/HrMonitorScreen.kt` |
+| BLE scan + GATT connection | `app/src/main/java/dev/bri/polarbear/ble/BleManager.kt` |
+| HR Measurement parser (0x2A37) | `app/src/main/java/dev/bri/polarbear/ble/HrParser.kt` |
+| UI state machine | `app/src/main/java/dev/bri/polarbear/ble/BleUiState.kt` |
+| Single screen (scan → connect → live bpm) | `app/src/main/java/dev/bri/polarbear/ui/screen/HrMonitorScreen.kt` |
 
 ## Architecture Guidelines
 
