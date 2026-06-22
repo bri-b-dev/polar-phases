@@ -46,7 +46,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import dev.bri.polarbear.data.model.HrZone
-import dev.bri.polarbear.viewmodel.KarvonenFormState
+import dev.bri.polarbear.viewmodel.HrmaxFormState
 import dev.bri.polarbear.viewmodel.ZoneFormState
 import dev.bri.polarbear.viewmodel.ZoneViewModel
 
@@ -68,7 +68,7 @@ private val COLOR_PALETTE = listOf(
 fun ZoneManagementScreen(viewModel: ZoneViewModel, onBack: () -> Unit) {
     val zones by viewModel.zones.collectAsState()
     val zoneDialog by viewModel.zoneDialog.collectAsState()
-    val karvonenDialog by viewModel.karvonenDialog.collectAsState()
+    val hrmaxDialog by viewModel.hrmaxDialog.collectAsState()
 
     Scaffold(
         topBar = {
@@ -80,8 +80,8 @@ fun ZoneManagementScreen(viewModel: ZoneViewModel, onBack: () -> Unit) {
                     }
                 },
                 actions = {
-                    TextButton(onClick = { viewModel.openKarvonenDialog() }) {
-                        Text("Karvonen")
+                    TextButton(onClick = { viewModel.openHrmaxDialog() }) {
+                        Text("% HRmax")
                     }
                 },
             )
@@ -129,12 +129,12 @@ fun ZoneManagementScreen(viewModel: ZoneViewModel, onBack: () -> Unit) {
         )
     }
 
-    if (karvonenDialog != null) {
-        KarvonenDialog(
-            form = karvonenDialog!!,
-            onDismiss = { viewModel.dismissKarvonenDialog() },
-            onApply = { viewModel.applyKarvonen() },
-            onUpdate = { viewModel.updateKarvonenForm(it) },
+    if (hrmaxDialog != null) {
+        HrmaxDialog(
+            form = hrmaxDialog!!,
+            onDismiss = { viewModel.dismissHrmaxDialog() },
+            onApply = { viewModel.applyHrmax() },
+            onUpdate = { viewModel.updateHrmaxForm(it) },
         )
     }
 }
@@ -235,30 +235,22 @@ private fun ZoneDialog(
 }
 
 @Composable
-private fun KarvonenDialog(
-    form: KarvonenFormState,
+private fun HrmaxDialog(
+    form: HrmaxFormState,
     onDismiss: () -> Unit,
     onApply: () -> Unit,
-    onUpdate: (KarvonenFormState.() -> KarvonenFormState) -> Unit,
+    onUpdate: (HrmaxFormState.() -> HrmaxFormState) -> Unit,
 ) {
     AlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text("Karvonen Zone Seed") },
+        title = { Text("% HRmax Zone Seed") },
         text = {
             Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
                 Text(
-                    "Replaces all current zones with 5 zones computed from the Karvonen formula.",
+                    "Replaces all current zones with 5 zones based on percentages of your max heart rate.",
                     style = MaterialTheme.typography.bodyMedium,
                 )
                 Spacer(Modifier.height(4.dp))
-                OutlinedTextField(
-                    value = form.restingHr,
-                    onValueChange = { v -> onUpdate { copy(restingHr = v.filter { it.isDigit() }) } },
-                    label = { Text("Resting HR (bpm)") },
-                    singleLine = true,
-                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
-                    modifier = Modifier.fillMaxWidth(),
-                )
                 OutlinedTextField(
                     value = form.maxHr,
                     onValueChange = { v -> onUpdate { copy(maxHr = v.filter { it.isDigit() }) } },
